@@ -4,7 +4,9 @@
   "description": "Some microtasks and informing scripts",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/mixrich/scripts#readme",
   "devDependencies": {
     "mocha": "^6.0.2"
+  },
+  "dependencies": {
+    "typescript": "^3.3.4000"
   }
 }
