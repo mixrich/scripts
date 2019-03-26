@@ -1,0 +1,22 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Some microtasks and informing scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixrich/scripts.git"
+  },
+  "author": "Rychagov Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mixrich/scripts/issues"
+  },
+  "homepage": "https://github.com/mixrich/scripts#readme",
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  }
+}
