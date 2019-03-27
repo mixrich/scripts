@@ -4,7 +4,7 @@
   "description": "Some microtasks and informing scripts",
   "main": "index.js",
   "scripts": {
-    "test": "ts-mocha -p tsconfig.json src/**/*.spec.ts",
+    "test": "ts-mocha -p tsconfig.json src/**/*.spec.ts --exclude src/**/!*.spec.ts",
     "build": "tsc",
     "watch": "tsc -w"
   },
