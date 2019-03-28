@@ -28,9 +28,9 @@ describe('Weak Point', () => {
         assert.deepEqual(weakPoint(example), [3, 3]);
     });
     it('should return [1, 2] for TwoPointsExample', () => {
-        assert.deepEqual(weakPoint(example), [1, 2]);
+        assert.deepEqual(weakPoint(twoPointsExample), [1, 2]);
     });
     it('should return [0, 0] for TopLeft', () => {
-        assert.deepEqual(weakPoint(example), [0, 0]);
+        assert.deepEqual(weakPoint(topLeft), [0, 0]);
     });
 });
