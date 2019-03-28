@@ -1,8 +1,34 @@
 /**
- * https://js.checkio.org/en/mission/most-wanted-letter/
+ * This is solution maked by SaintDron
+ * https://js.checkio.org/mission/most-wanted-letter/publications/SaintDron/js-node/second/?ordering=most_voted&filtering=all
+ *
+ * I just wanna compare the performance against my solution
+ *
+ * If message.lenght about 3000000, the performance time on my MacMini is 731ms;
  * @param message
  */
-export function mostWanted(message: string): string {
+function findAsSaintDron(message: string) {
+    let character = '';
+    let frequency = 0;
+
+    for (let letter = 'a'; letter <= 'z'; letter = String.fromCharCode(letter.charCodeAt(0) + 1)) {
+        const count = message.toLowerCase().split(letter).length;
+        if (count > frequency) {
+            frequency = count;
+            character = letter;
+        }
+    }
+
+    return character;
+}
+
+/**
+ * This is my solution
+ *
+ * If message.lenght about 3000000, the performance time on my MacMini is 296ms;
+ * @param message
+ */
+function findViaMessageLoop(message: string): string {
     /**
      * Here will be stored the frequency for every letter
      */
@@ -42,6 +68,15 @@ export function mostWanted(message: string): string {
     }
 
     return targetLetter;
+}
+
+
+/**
+ * https://js.checkio.org/en/mission/most-wanted-letter/
+ * @param message
+ */
+export function mostWanted(message: string): string {
+    return findViaMessageLoop(message);
 }
 
 export default mostWanted;
