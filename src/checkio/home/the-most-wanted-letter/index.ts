@@ -13,9 +13,7 @@ export function mostWanted(message: string): string {
      */
     let targetLetter: string;
 
-    for (const rawChar of message) {
-        const letter: string = rawChar.toLowerCase();
-
+    for (const letter of message.toLowerCase()) {
         /**
          * Exluding every letter outside of "a-z" range
          */
