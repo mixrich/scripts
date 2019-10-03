@@ -1,6 +1,9 @@
 # Project Folders
 dist/
 
+# IntelliJ IDEA
+.idea
+
 # Logs
 logs
 *.log
