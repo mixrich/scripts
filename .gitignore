@@ -1,5 +1,7 @@
 # Project Folders
 dist/
+sandbox/
+!sandbox/.gitkeep
 
 # IntelliJ IDEA
 .idea
