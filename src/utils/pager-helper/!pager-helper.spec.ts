@@ -24,7 +24,7 @@ const examples: {value: IPagerHelperOptions, expected: number[]}[] = [
 describe('PagerButtonsBuilder', () => {
     examples.forEach(ex => {
         it(`should return "${ex.expected}" for "position=${ex.value.current}" of "total count = ${ex.value.total}" with "length = "${ex.value.length}"`, () => {
-            assert.equal(pagerHelper(ex.value).join(), ex.expected.join());
+            assert.sameOrderedMembers(pagerHelper(ex.value), ex.expected);
         })
     })
 });

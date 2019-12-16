@@ -38,7 +38,7 @@ const examples: {value: {l: number, i: number}, expected: number[]}[] = [
 describe('Array get loop items', () => {
     examples.forEach(ex => {
         it(`should return "${ex.expected}" for "array=${array.join()}", "count = ${ex.value.l}" with "index= "${ex.value.i}"`, () => {
-            assert.equal(arrayLoopedItems(array, ex.value.i, ex.value.l).join(), ex.expected.join());
+            assert.sameOrderedMembers(arrayLoopedItems(array, ex.value.i, ex.value.l), ex.expected);
         })
     })
 });
